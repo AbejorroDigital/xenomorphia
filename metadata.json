@@ -1,0 +1,6 @@
+{
+  "name": "Xenomorphia — Generador Procedural de Criaturas",
+  "description": "Generador procedural de criaturas alienígenas en WebGL/Three.js con geometría orgánica SDF, curvas Catmull-Rom, shaders PBR personalizados, texturas procedurales y exportación GLB/OBJ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

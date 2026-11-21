@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    background-color: #090c10;
+    color: #f1f5f9;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle range sliders for dark studio dock */
+input[type='range'].studio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(148, 163, 184, 0.22);
+  outline: none;
+}
+
+input[type='range'].studio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2dd4bf;
+  border: 2px solid #090c10;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+input[type='range'].studio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type='range'].studio-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2dd4bf;
+  border: 2px solid #090c10;
+  cursor: pointer;
+}
+
+/* Position lil-gui cleanly when toggled */
+.lil-gui.root {
+  position: fixed !important;
+  top: 16px !important;
+  right: 16px !important;
+  z-index: 30 !important;
+  --background-color: rgba(12, 16, 23, 0.94) !important;
+  --widget-color: #1e293b !important;
+  --focus-color: #334155 !important;
+  --hover-color: #293548 !important;
+  --number-color: #2dd4bf !important;
+  --string-color: #38bdf8 !important;
+  --font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  --font-family-mono: 'JetBrains Mono', monospace !important;
+}
